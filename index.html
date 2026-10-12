@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0f766e">
+  <meta name="description" content="Registro de reservas y gastos de la propiedad">
+  <title>Alquileres</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1 id="titulo">Inicio</h1>
+    <div class="seg" role="group" aria-label="Moneda de visualización" id="moneda-toggle">
+      <button type="button" data-moneda="USD" aria-pressed="true">USD</button>
+      <button type="button" data-moneda="UYU" aria-pressed="false">UYU</button>
+    </div>
+  </header>
+
+  <main id="vista" tabindex="-1"></main>
+
+  <nav class="tabbar" aria-label="Secciones">
+    <a href="#inicio" data-tab="inicio">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>
+      <span>Inicio</span>
+    </a>
+    <a href="#calendario" data-tab="calendario">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2v3M17 2v3M3.5 9h17M5 4.5h14a1.5 1.5 0 0 1 1.5 1.5v13A1.5 1.5 0 0 1 19 20.5H5A1.5 1.5 0 0 1 3.5 19V6A1.5 1.5 0 0 1 5 4.5z"/></svg>
+      <span>Calendario</span>
+    </a>
+    <a href="#gastos" data-tab="gastos">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4zM4 9h16M8 14h4"/></svg>
+      <span>Gastos</span>
+    </a>
+    <a href="#mas" data-tab="mas">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h.01M12 12h.01M19 12h.01"/></svg>
+      <span>Más</span>
+    </a>
+  </nav>
+
+  <dialog id="dlg" aria-labelledby="dlg-titulo"></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
